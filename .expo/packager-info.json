@@ -1,10 +1,10 @@
 {
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 28660,
-  "expoServerNgrokUrl": "https://6p-jam.anonymous.movie.exp.direct",
-  "packagerNgrokUrl": "https://packager.6p-jam.anonymous.movie.exp.direct",
-  "ngrokPid": 11368,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null,
   "devToolsPort": 19002
 }
