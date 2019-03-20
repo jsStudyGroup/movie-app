@@ -1,10 +1,19 @@
 {
   "devToolsPort": 19002,
+<<<<<<< HEAD
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
   "expoServerNgrokUrl": null,
   "packagerNgrokUrl": null,
   "ngrokPid": null,
+=======
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 8188,
+  "expoServerNgrokUrl": "https://6p-jam.anonymous.movie-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.6p-jam.anonymous.movie-app.exp.direct",
+  "ngrokPid": 5724,
+>>>>>>> 38712580a97c95698843efb311b63e30df2efed5
   "webpackServerPort": null
 }
