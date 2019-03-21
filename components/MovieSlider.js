@@ -10,7 +10,9 @@ const SWIPER_HEIGHT = Layout.height / 3
 const View = styled.View`
   height: ${SWIPER_HEIGHT};
 `
-const Text = styled.Text``
+const Text = styled.Text`
+    
+`
 
 const MovieSlider = ({ movies }) =>
     movies ? (
