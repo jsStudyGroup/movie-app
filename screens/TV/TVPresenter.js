@@ -14,7 +14,7 @@ const TVPresenter = ({ loading, popular, airingThisWeek, airingToday }) =>
     loading ? (
         <Loader />
     ) : (
-        <Container>
+      <Container>
       {airingToday ? (
         <Section title="Airing Today">
           {airingToday

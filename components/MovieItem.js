@@ -34,13 +34,27 @@ const Overview = styled.Text`
   margin-vertical: 10px;
 `;
 
-const MovieItem = ({ id, posterPhoto, title, voteAvg }) => (
-    <Container>
-        <MoviePoster path={posterPhoto} />
-        <Title>{title.length > 20 ? `${title.substring(0, 18)}...` : title}</Title>
-        <MovieRating votes={voteAvg} />
-    </Container>
-)
+const MovieItem = ({
+  id,
+  posterPhoto,
+  title,
+  voteAvg,
+  horizontal = false,
+  overview,
+  isMovie = true,
+  navigation
+}) => 
+  horizontal ? (
+  <HContainer>
+    <MoviePoster path={posterPhoto} />
+  </HContainer>
+  ) : (
+  <Container>
+    <MoviePoster path={posterPhoto} />
+    <Title>{title.length > 20 ? `${title.substring(0, 18)}...` : title}</Title>
+    <MovieRating votes={voteAvg} />
+  </Container>  
+  )
 
 MovieItem.propTypes = {
   id: PropTypes.number.isRequired,

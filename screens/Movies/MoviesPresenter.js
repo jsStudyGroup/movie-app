@@ -15,30 +15,47 @@ const MoviesPresenter = ({ loading, upcoming, popular, nowPlaying }) =>
     <Loader />
   ) : (
     <Container>
-        {nowPlaying ? <MovieSlider movies={nowPlaying} /> : null}
-        {upcoming ? (
-          <Section movies={upcoming} title='Upcoming Movies'>
-            {              
-              upcoming.filter( movie => movie.poster_path !== null ).map( movie => (
-                <MovieItem
-                    key={movie.id}
-                    id={movie.id}
-                    posterPhoto={movie.poster_path}
-                    title={movie.title}
-                    voteAvg={movie.vote_average}
-                />)
-              )        
-            }
-          </Section>) : null
-        }
-    </Container>
+      {nowPlaying ? <MovieSlider movies={nowPlaying} /> : null}
+      {upcoming ? (
+      <Section title="Upcoming Movies">
+        {upcoming
+          .filter(movie => movie.poster_path !== null)
+          .map(movie => (
+            <MovieItem
+              key={movie.id}
+              id={movie.id}
+              posterPhoto={movie.poster_path}
+              title={movie.title}
+              voteAvg={movie.vote_average}
+            />
+          ))}
+      </Section>
+    ) : null}
+    {popular ? (
+      <Section horizontal={false} title="Popular Movies">
+        {popular
+          .filter(movie => movie.poster_path !== null)
+          .map(movie => (
+            <MovieItem
+              horizontal={true}
+              key={movie.id}
+              id={movie.id}
+              posterPhoto={movie.poster_path}
+              title={movie.title}
+              overview={movie.overview}
+              voteAvg={movie.vote_average}
+            />
+          ))}
+      </Section>
+    ) : null}
+  </Container>
   )
 
 MoviesPresenter.propTypes = {
-    loading: PropTypes.bool.isRequired,
-    upcoming: PropTypes.array,
-    popular: PropTypes.array,
-    nowPlaying: PropTypes.array
+  loading: PropTypes.bool.isRequired,
+  upcoming: PropTypes.array,
+  popular: PropTypes.array,
+  nowPlaying: PropTypes.array
 }
 
 export default MoviesPresenter
